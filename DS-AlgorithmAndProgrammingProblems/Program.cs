@@ -11,7 +11,7 @@ public class Program
         bool flag = true;
         while (flag)
         {
-            Console.WriteLine("\nSelect option to execute \n1.Binary Search \n2.Insertion Sort \n3.Exit");
+            Console.WriteLine("\nSelect option to execute \n1.Binary Search \n2.Insertion Sort \n3.Bubble Sort \n4.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -25,6 +25,10 @@ public class Program
                 case 2:
                     InsertionSort insertionSort = new InsertionSort();
                     insertionSort.Sort();
+                    break;
+                case 3:
+                    BubbleSort bubbleSort = new BubbleSort();
+                    bubbleSort.Sort();
                     break;
                 default:
                     flag = false;
