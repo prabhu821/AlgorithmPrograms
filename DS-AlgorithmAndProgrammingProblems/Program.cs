@@ -11,7 +11,7 @@ public class Program
         bool flag = true;
         while (flag)
         {
-            Console.WriteLine("\nSelect option to execute \n1.Binary Search \n2.Exit");
+            Console.WriteLine("\nSelect option to execute \n1.Binary Search \n2.Insertion Sort \n3.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -21,6 +21,10 @@ public class Program
                     Console.WriteLine("Enter word you want to search");
                     string str = Console.ReadLine();
                     search.BinarySearchOperation(str);
+                    break;
+                case 2:
+                    InsertionSort insertionSort = new InsertionSort();
+                    insertionSort.Sort();
                     break;
                 default:
                     flag = false;
