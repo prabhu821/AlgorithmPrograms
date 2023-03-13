@@ -12,7 +12,7 @@ public class Program
         while (flag)
         {
             Console.WriteLine("\nSelect option to execute \n1.Binary Search \n2.Insertion Sort \n3.Bubble Sort \n4.Merge Sort" +
-                "\n5.Exit");
+                "\n5.Anagram Detection \n6.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -46,6 +46,10 @@ public class Program
                     {
                         Console.Write(arrPass[i] + " ");
                     }
+                    break;
+                case 5:
+                    AnagramDetection anagramDetection = new AnagramDetection();
+                    anagramDetection.Anagram();
                     break;
                 default:
                     flag = false;
