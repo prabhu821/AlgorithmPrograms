@@ -1,4 +1,5 @@
 ﻿using DS_AlgorithmAndProgrammingProblems.AlgorithmPrograms;
+using DS_AlgorithmAndProgrammingProblems.DataStructurePrograms;
 
 namespace DS_AlgorithmAndProgrammingProblems;
 
@@ -12,7 +13,7 @@ public class Program
         while (flag)
         {
             Console.WriteLine("\nSelect option to execute \n1.Binary Search \n2.Insertion Sort \n3.Bubble Sort \n4.Merge Sort" +
-                "\n5.Anagram Detection \n6.Prime Number \n7.Customize Message \n8.Exit");
+                "\n5.Anagram Detection \n6.Prime Number \n7.Customize Message \n8.Balanced Parantheses \n9.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -58,6 +59,10 @@ public class Program
                 case 7:
                     CustomizeMessage userInput = new CustomizeMessage();
                     userInput.ReplaceString();
+                    break;
+                case 8:
+                    BalancedParantheses balancedParantheses = new BalancedParantheses();
+                    balancedParantheses.CheckParantheses();
                     break;
                 default:
                     flag = false;
