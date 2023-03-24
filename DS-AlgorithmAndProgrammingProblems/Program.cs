@@ -13,7 +13,7 @@ public class Program
         while (flag)
         {
             Console.WriteLine("\nSelect option to execute \n1.Binary Search \n2.Insertion Sort \n3.Bubble Sort \n4.Merge Sort" +
-                "\n5.Anagram Detection \n6.Prime Number \n7.Customize Message \n8.Balanced Parantheses \n9.Exit");
+                "\n5.Anagram Detection \n6.Prime Number \n7.Customize Message \n8.Balanced Parantheses \n9.Bank Cash Counter \n10.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -63,6 +63,10 @@ public class Program
                 case 8:
                     BalancedParantheses balancedParantheses = new BalancedParantheses();
                     balancedParantheses.CheckParantheses();
+                    break;
+                case 9:
+                    BankCashCounter bankCashCounter = new BankCashCounter();
+                    bankCashCounter.CashCounter();
                     break;
                 default:
                     flag = false;
