@@ -8,12 +8,14 @@ public class Program
     public static string filepath = @"D:\OneDrive\Desktop\bridgelabz\DS-AlgorithmAndProgrammingProblems\DS-AlgorithmAndProgrammingProblems\AlgorithmPrograms\WordFile.txt";
     static void Main(string[] args)
     {
+        DataStructurePrograms.LinkedList<string> list = new DataStructurePrograms.LinkedList<string>(); 
         Console.WriteLine("DS-Algorithm and Programming Problems");
         bool flag = true;
         while (flag)
         {
             Console.WriteLine("\nSelect option to execute \n1.Binary Search \n2.Insertion Sort \n3.Bubble Sort \n4.Merge Sort" +
-                "\n5.Anagram Detection \n6.Prime Number \n7.Customize Message \n8.Balanced Parantheses \n9.Bank Cash Counter \n10.Exit");
+                "\n5.Anagram Detection \n6.Prime Number \n7.Customize Message \n8.Balanced Parantheses \n9.Bank Cash Counter " +
+                "\n10.Unordered List \n11.Display List \n12.Search in List \n13.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -67,6 +69,22 @@ public class Program
                 case 9:
                     BankCashCounter bankCashCounter = new BankCashCounter();
                     bankCashCounter.CashCounter();
+                    break;
+                case 10:
+                    string text = "This is a sample text";
+                    string[] StrList = text.Split(" ");
+                    foreach (var word in StrList)
+                    {
+                        list.Add(word);
+                    }
+                    break;
+                case 11:
+                    list.Display();
+                    break;
+                case 12:
+                    Console.WriteLine("\nEnter value u want to search");
+                    string value = Console.ReadLine();
+                    list.Search(value);
                     break;
                 default:
                     flag = false;
