@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DS_AlgorithmAndProgrammingProblems.DataStructurePrograms;
 
-public class LinkedList<T>
+public class LinkedList<T> where T : IComparable
 {
     public Node<T> head;
     public void Add(T data)
@@ -83,6 +83,34 @@ public class LinkedList<T>
             }
             prev = temp;
             temp = temp.next;
+        }
+    }
+    public void SortList()
+    {
+        Node<T> current = head, index = null;
+        T temp;
+        if (head == null)
+        {
+            Console.WriteLine("LinkedList is Empty");
+            return;
+        }
+        else
+        {
+            while (current != null)
+            {
+                index = current.next;
+                while (index != null)
+                {
+                    if (current.data.CompareTo(index.data) > 0)
+                    {
+                        temp = current.data;
+                        current.data = index.data;
+                        index.data = temp;
+                    }
+                    index = index.next;
+                }
+                current = current.next;
+            }
         }
     }
 }

@@ -13,9 +13,9 @@ public class Program
         bool flag = true;
         while (flag)
         {
-            Console.WriteLine("\nSelect option to execute \n1.Binary Search \n2.Insertion Sort \n3.Bubble Sort \n4.Merge Sort" +
+            Console.WriteLine("\n\nSelect option to execute \n1.Binary Search \n2.Insertion Sort \n3.Bubble Sort \n4.Merge Sort" +
                 "\n5.Anagram Detection \n6.Prime Number \n7.Customize Message \n8.Balanced Parantheses \n9.Bank Cash Counter " +
-                "\n10.Unordered List \n11.Display List \n12.Search in List \n13.Exit");
+                "\n10.Unordered List \n11.Ordered List \n12.Display List \n13.Search in List \n14.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -79,9 +79,20 @@ public class Program
                     }
                     break;
                 case 11:
+                    string text1 = "e u i a o";
+                    string[] StrList1 = text1.Split(" ");
+                    foreach (var words in StrList1)
+                    {
+                        list.Add(words);
+                    }
+                    list.SortList();
+                    Console.WriteLine("\nAfter Sorting list :");
                     list.Display();
                     break;
                 case 12:
+                    list.Display();
+                    break;
+                case 13:
                     Console.WriteLine("\nEnter value u want to search");
                     string value = Console.ReadLine();
                     list.Search(value);
